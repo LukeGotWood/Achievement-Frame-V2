@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "1098f87b-1b30-48d1-a215-c8034c9fa4f9",
+		"name": "Sessions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get party",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/party",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"party"
+					]
+				},
+				"description": "Return party chat session information."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

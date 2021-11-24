@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "aa4f3528-4ec2-4453-b4cb-191356cc4e69",
+		"name": "Outbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send a direct message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"xuid\": \"{{xuid}}\",\n\t\"message\": \"This message was sent using OpenXBL API\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Hostname}}/conversations",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"conversations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create group conversation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n\t\"participants\": [\n\t\t\"2533274798129181\",\n\t\t\"{{xuid}}\"\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{Hostname}}/group/create",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"group",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "83867227-da7f-4f2e-b9ef-df89bc7dccc9",
+		"name": "Clubs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create club",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \t\"name\":\"Hello World\", \n \t\"type\":\"[public/private/hidden]\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Hostname}}/clubs/create",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"clubs",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get owned clubs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/clubs/owned",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"clubs",
+						"owned"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get club recommendations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/clubs/recommendations",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"clubs",
+						"recommendations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find a club",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/clubs/find?q=example",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"clubs",
+						"find"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "example"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check if club name is available",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \t\"name\": \"Hello World\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Hostname}}/clubs/reserve",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"clubs",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

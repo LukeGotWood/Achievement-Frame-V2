@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "bb11833a-647c-42a9-9918-6a1bf012931d",
+		"name": "Achievements",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get achievements",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/achievements",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"achievements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get player title achievements",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/achievements/title/{{titleId}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"achievements",
+						"title",
+						"{{titleId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get title achievements",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/achievements/{{titleId}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"achievements",
+						"{{titleId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get player stats by title",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/achievements/stats/{{titleId}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"achievements",
+						"stats",
+						"{{titleId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,34 @@
+{
+	"id": "f738b969-be1e-465d-8f39-f5b6e270f892",
+	"name": "Environment",
+	"values": [
+		{
+			"key": "Hostname",
+			"value": "https://xbl.io/api/v2",
+			"enabled": true
+		},
+		{
+			"key": "xuid",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "groupId",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "gamertag",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "titleId",
+			"value": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-04-08T01:57:34.122Z",
+	"_postman_exported_using": "Postman/7.21.2"
+}

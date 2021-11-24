@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "1a2a5981-1120-4402-a7e7-8f4e6c585a61",
+		"name": "Profile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/account",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get someone elses profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/account/{{xuid}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"account",
+						"{{xuid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate gamertag",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Algorithm\":1,\n\t\"Count\":3,\n\t\"Locale\":\"{{Accept-Language}}\",\n\t\"Seed\":\"\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Hostname}}/generate/gamertag",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"generate",
+						"gamertag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get activity feed",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/activity/feed",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"activity",
+						"feed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get activity feed history",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/activity/history",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"activity",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post message to activity feed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": \"Posted using OpenXBL API\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Hostname}}/activity/feed",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"activity",
+						"feed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get notifications",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/alerts",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"alerts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get player summary",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/player/summary",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"player",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

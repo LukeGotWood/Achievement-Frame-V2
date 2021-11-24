@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "e288a27b-334d-4dfa-9848-2c28dc1278ce",
+		"name": "Friends",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get friends list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/friends",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"friends"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get someone elses friends list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/friends?xuid={{xuid}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"friends"
+					],
+					"query": [
+						{
+							"key": "xuid",
+							"value": "{{xuid}}"
+						}
+					]
+				},
+				"description": "Results will depend on specific user privacy settings."
+			},
+			"response": []
+		},
+		{
+			"name": "Search for gamertag",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/friends/search/?gt={{gamertag}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"friends",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "gt",
+							"value": "{{gamertag}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send friend request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/friends/add/{{xuid}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"friends",
+						"add",
+						"{{xuid}}"
+					]
+				},
+				"description": "Status 200 OK means the request sent."
+			},
+			"response": []
+		},
+		{
+			"name": "Remove friend",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/friends/remove/{{xuid}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"friends",
+						"remove",
+						"{{xuid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add friend to favorites",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"xuids\":[{{xuid}}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Hostname}}/friends/favorite",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"friends",
+						"favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove friend from favorites",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"xuids\":[{{xuid}}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Hostname}}/friends/favorite/remove",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"friends",
+						"favorite",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get recent players",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/recent-players",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"recent-players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get presence of friends",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/presence",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"presence"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get presence of specific xuid's",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Hostname}}/{{xuid}}/presence",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"{{xuid}}",
+						"presence"
+					]
+				},
+				"description": "For example: /api/v2/1234567,8762567,9027469827/presence"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

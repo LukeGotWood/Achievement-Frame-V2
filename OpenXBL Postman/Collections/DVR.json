@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "523c0a26-a522-43c7-a1d5-200b45cf38fe",
+		"name": "DVR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get gameclips",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/dvr/gameclips",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"dvr",
+						"gameclips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get screenshots",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/dvr/screenshots",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"dvr",
+						"screenshots"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

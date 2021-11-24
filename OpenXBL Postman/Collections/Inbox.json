@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "a2765ccc-ea5a-410f-99fa-14a337cb38db",
+		"name": "Inbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all conversations",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/conversations",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"conversations"
+					]
+				},
+				"description": "This returns a list of conversations from people in your friends list."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all conversation requests",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/conversations/requests",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"conversations",
+						"requests"
+					]
+				},
+				"description": "These are conversations from people outside your friends list."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all group conversations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/group",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"group"
+					]
+				},
+				"description": "Returns a list of conversations with more than 2 participants."
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific conversation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/conversations/{{xuid}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"conversations",
+						"{{xuid}}"
+					]
+				},
+				"description": "Returns messages for a specific conversation."
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific group summary",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/group/summary/{{groupId}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"group",
+						"summary",
+						"{{groupId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific group conversation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Authorization",
+						"value": "{{X-Authorization}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{Hostname}}/group/messages/{{groupId}}",
+					"host": [
+						"{{Hostname}}"
+					],
+					"path": [
+						"group",
+						"messages",
+						"{{groupId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
