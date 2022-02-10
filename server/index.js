@@ -10,7 +10,6 @@ app.get("/api", (req, res) => {
 });
 
 app.get("/api/achievements", (req, res) => {
-  console.log("request recieved!");
   fs.readFile("./server/db.json", (err, json) => {
     let obj = JSON.parse(json);
     res.json(obj);
